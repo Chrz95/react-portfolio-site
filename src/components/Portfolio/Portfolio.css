@@ -1,0 +1,78 @@
+.portfolio__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.portfolio__item {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.portfolio__items:hover {
+    border-color: var(--color-primary-variant);
+    background-color: transparent;
+}
+
+.portfolio__item-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.portfolio__item h3 {
+    margin: 1.2rem 0 2rem;
+}
+
+.portfolio__item-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about__card {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+    padding: 0.5rem 1rem 0 1rem;
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    transition: var(--transition);
+
+}
+
+.about__card.cert_card
+{
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+
+@media screen and (max-width:1024px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+
+
+    }
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) =============== */
+
+@media screen and (max-width:600px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

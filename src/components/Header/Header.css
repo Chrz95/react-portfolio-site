@@ -1,0 +1,122 @@
+header {
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    position: relative;
+}
+
+/* ============= CTA ================== */
+
+.cta {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* ============= HeaderSocials ================== */
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 6rem;
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+.header__socials::before {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/* ============= ME  ================== */
+
+/* OLD image */
+.me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 18rem;
+    height: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 12rem 12rem 12rem 12rem;
+    overflow: hidden;
+}
+
+.about__me {
+    width: 30%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    place-items: center;
+    margin-top: 3rem;
+}
+
+.about__me-image
+{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg) ;
+    transition: var(--transition);
+
+}
+
+.about__me-image:hover
+{
+    transform: rotate(0) ;
+
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+
+@media screen and (max-width:1024px) {
+    .header {
+        height: 68vh;
+    }
+
+    .me {
+        width: 14rem;
+        height: 22rem;
+    }
+
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) =============== */
+
+@media screen and (max-width:600px) {
+    .header {
+        height: 100vh;
+    }
+
+    .header__socials .scroll__down {
+        /* hidden them on phones*/
+        display: none;
+
+    }
+
+    .header__socials {
+        /* hidden them on phones*/
+        display: none;
+
+    }
+
+
+    .me {
+        width: 10rem;
+        height: 17rem;
+    }
+}
